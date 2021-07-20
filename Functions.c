@@ -17,6 +17,26 @@ void Help(int argv, char **args)
         printf(COLOR_GREEN "print" COLOR_RESET " [text]: print text depending colors typed. e.g. print -red hello -reset \"   World\"\n");
         printf(COLOR_GREEN "ls" COLOR_RESET ": print all files contained in the current working directory\n");
         printf(COLOR_GREEN "cd" COLOR_RESET " [path]: change current working directory. e.g. \"parent/child1\"\n");
+        printf(COLOR_GREEN "mkdir" COLOR_RESET " name: Create a directory.\n");
+        printf(COLOR_GREEN "touch" COLOR_RESET " name: Create a file.\n");
+        printf(COLOR_GREEN "rm" COLOR_RESET " path: Remove a file or a directory.\n");
+        printf(COLOR_GREEN "rename" COLOR_RESET " path newName: Rename a file or a directory.\n");
+    }
+    else if (ComparString("rename", args[1]))
+    {
+        printf(COLOR_GREEN "rename" COLOR_RESET " path newName: Rename a file or a directory.\n");
+    }
+    else if (ComparString("rm", args[1]))
+    {
+        printf(COLOR_GREEN "rm" COLOR_RESET " path: Remove a file or a directory.\n");
+    }
+    else if (ComparString("touch", args[1]))
+    {
+        printf(COLOR_GREEN "touch" COLOR_RESET " name: Create a file.\n");
+    }
+    else if (ComparString("mkdir", args[1]))
+    {
+        printf(COLOR_GREEN "mkdir" COLOR_RESET " name: Create a directory.\n");
     }
     else if (ComparString("ls", args[1]))
     {
